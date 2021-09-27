@@ -48,9 +48,38 @@ addBtn.onclick = ()=>{
     let newLiTag = "";
     
     listArray.forEach((element, index) => {
-      newLiTag += `<li class="text">  <input type="checkbox" id="checkbox" class="custom_checkbox" onclick="todoChecked()"/> ${element}<span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
-    });
+      newLiTag += `<li id=${index}>  <input type="checkbox" id="checkbox" class="custom_checkbox" onclick="todoChecked(this,${index})"  /> ${element}<span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;    });
     todoList.innerHTML = newLiTag;
     inputBox.value = "";
   }
   
+ 
+function deleteTask(index){
+  let getLocalStorageData = localStorage.getItem("New Todo");
+  listArray = JSON.parse(getLocalStorageData);
+  listArray.splice(index, 1); 
+  localStorage.setItem("New Todo", JSON.stringify(listArray));
+  showTasks(); 
+}
+
+
+deleteAllBtn.onclick = ()=>{
+  listArray = [];
+  localStorage.setItem("New Todo", JSON.stringify(listArray)); 
+  showTasks(); 
+}
+
+function todoChecked(checkBox,index){
+
+  var text = document.getElementById(index);
+ 
+  if (checkBox.checked){
+    text.style.textDecoration = "line-through"
+  
+  } else {
+    text.style.textDecoration = 'none'
+    
+  }
+
+
+}
