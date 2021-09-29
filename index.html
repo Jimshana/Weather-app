@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scheduler</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
     <div class="box">
-        <header style="text-align: center;font-family: Papyrus, fantasy; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;font-size: xx-large;">Scheduler</header> 
-        <div class="inputField">
-          <input type="text" placeholder="Add your new todo">
-          <button><i class="fas fa-plus"></i></button>
-        </div>
-        <ul class="todoList">
-        </ul>
-        <div class="footer">
-          <span>You have <span class="pendingTasks"></span> pending tasks</span>
-          <button>Clear All</button>
-        </div>
+      <header
+        style="
+          text-align: center;
+          font-family: Papyrus, fantasy;
+          font-size: 24px;
+          font-style: normal;
+          font-variant: normal;
+          font-weight: 700;
+          line-height: 26.4px;
+          font-size: xx-large;
+        "
+      >
+        Scheduler
+      </header>
+      <div class="inputField">
+        <input type="text" placeholder="Add your new todo" />
+        <button><i class="fas fa-plus"></i></button>
       </div>
-      <script src="app.js" ></script>
-</body>
+      <ul class="todoList"></ul>
+      <div class="footer">
+        <span></span>
+        <button>Clear All</button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>
